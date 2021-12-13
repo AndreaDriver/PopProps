@@ -1,0 +1,149 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../static/css/EstilosLogin.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+
+        <!--Letra gruesa-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Notable&family=Ropa+Sans&family=Zen+Antique&display=swap" rel="stylesheet">
+
+      <!-- ICONO EN LA PESTANA -->
+<link rel="shortcut icon"  href="/static/Img/icoPopU.ico">
+
+
+    <title> {% block titulo %}  titulo {% endblock %}</title>
+
+  </head>
+  <body class="">
+<section class="vh-100 d-flex justify-content-center ">
+
+    <div class="container-fluid g-0 d-flex justify-content-center flex-grow-1 ">
+    <div class="row col-12 g-0 ">
+
+        <!-- COLUMNA LOGIN -->
+        <div class="container-fluid ingreso col-10 col-xs-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5 h-100vh d-flex flex-column align-self-center">
+            <div class="d-flex justify-content-center h-100 w-100 px-lg-5 pb-lg-3 p-4">
+             <img src="/static/Img/PropsLogoPNG.png" class="text-center logo" alt="...">
+            </div>
+            <div class="w-100 ">
+            <div class="mt-3 mb-auto">
+                <h1 style="font-family: 'Luckiest Guy', cursive;" class="col-12 d-flex justify-content-center inciaS"> {% block tituloPagina %} {% endblock %}</h1>
+            </div>
+
+            {% block alerta %} {% endblock %}
+
+                <form method="post">
+                <!-- TOKEN -->
+                {% csrf_token %}
+                <div class="">
+
+                  <!-- CORREO -->
+              <div class=" mb-4 mx-4 ">
+                  <div><label class="form-label titulos " for="email">Correo</label></div>
+                  <div class="ingresarDatos">
+                      <i class="logitos">{% block logito1 %} {% endblock %}</i>
+                       {% block ingresa1%} {% endblock %}
+                  </div>
+              </div>
+
+                <!-- CONTRA -->
+              <div class="form-outline mx-4 ">
+                <div><label for="contrasena" class="form-label  titulos">Contraseña</label></div>
+                <div class="ingresarDatos">
+                      <i class="logitos">
+                        {% block logito2 %} {% endblock %}
+                      </i>
+                        {% block ingresa2 %} {% endblock %}
+                  </div>
+              </div>
+
+                    <div class="mx-4 mt-5">
+                        {% block botones1 %} {% endblock %}
+                    </div>
+                </div>
+
+
+                    <div class="d-flex justify-content-center align-items-center pb-4 mb-auto mt-auto">
+                        <p class="mb-0 me-2 noTienesC" >{% block pregunta %} {% endblock %}</p>
+                    {% block botonPregunta %} {% endblock %}
+                    </div>
+
+
+            </form>
+
+            </div>
+
+
+
+        </div><!-- FIN COLUMNA LOGIN -->
+
+
+        <!-- COLUMNA IMAGENES -->
+        <div class="col-7 d-none d-lg-block ">
+
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/static/Img/delorean.jpeg" class="d-block w-100 imaC" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="titulosImagenesCarrusel">First slide label</h5>
+        <p class="textoImagenesCarrusel">Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/Img/LOR.jpg" class="d-block w-100 imaC" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="titulosImagenesCarrusel">Second slide label</h5>
+        <p class="textoImagenesCarrusel">Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/Img/star%20trek.jpg" class="d-block w-100 imaC" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="titulosImagenesCarrusel">Third slide label</h5>
+        <p class="textoImagenesCarrusel">Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+        </div> <!-- en columna imagenes-->
+    </div><!-- FINAL ROW -->
+    </div><!-- FINAL CONTAINER -->
+</section> <!-- FINAL SECTION -->
+
+
+
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>

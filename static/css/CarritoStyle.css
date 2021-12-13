@@ -1,0 +1,232 @@
+.navbar{
+    background: linear-gradient(90deg, rgba(0,59,147,1) 0%, rgba(0,114,152,1) 35%, rgba(0,212,255,1) 100%);
+    /*background-color: red;*/
+}
+
+/*.border-bottom{*/
+/*    background-color: red;*/
+/*}*/
+
+.imagenArt{
+    /*width:  12.194444444444445vw;*/
+    height:  13vw;
+    width: 22vw;
+    /*height: 5vw;*/
+    /*width: 30vw;*/
+    /*background-color: red;*/
+}
+
+/**{background: #007298}*/
+
+.tag {
+  background: #cccccc;
+  border-radius: 50px;
+  /*font-size: 12px;*/
+    font-size: 0.8333333333333334vw;
+  margin: 0;
+  color: #fff;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+}
+
+/*.h5{*/
+/*    color: #007298;*/
+/*}*/
+
+
+.tag-teal {
+  background-color: #47bcd4;
+}
+
+.tag-teal2 {
+  background-color: #007298;
+}
+
+.ingresoCantidad{
+    /*background-color: #00d4ff;*/
+    padding: 5px;
+    /*margin: 5px;*/
+    width: 4vw;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    font-family: 'Ropa Sans', sans-serif;
+    border-color: #CBC8C4;
+    font-size: 1.5vw;
+}
+
+.unArt{
+/*-webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);*/
+/*box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);*/
+/*    background-color: #003b93;*/
+}
+
+.TituloProduc{
+    /*color: #FFFFFF;*/
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: 700;
+    font-size:2.3vw;
+}
+
+.descricionP{
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 1.5vw;
+}
+
+.precio{
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 1.8vw;
+    color: #9A9895;
+}
+
+.tituloArriba{
+    font-family: 'Ropa Sans', sans-serif;
+    color: #CBC8C4;
+    font-size: 1vw;
+}
+
+.bbody{
+    /*background-color: #007298;*/
+    /*height: 100vh;*/
+}
+
+.bi-bag-plus-fill{
+    height: 50px;
+    width: 50px;
+}
+
+.bi-bag-fill{}
+
+.bi-bag-plus{
+    height: 50px;
+    width: 50px;
+}
+
+#fot{
+    background: #007298;
+    background-color: #007298;
+    position: sticky;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+.container-xl{
+    padding-bottom:300px;
+    /*margin-bottom: 150px;*/
+}
+
+
+
+
+#Comprar{
+  color: #F2F2F2;
+  font-size: 1.7361111111111112vw;
+  font-family: 'Ropa Sans', sans-serif;
+  /*-webkit-text-stroke: .1vw black; !* width and color *!*/
+      background: rgb(0,59,147);
+background: linear-gradient(90deg, rgba(0,59,147,1) 0%, rgba(0,114,152,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+#Comprar:hover{
+    background: rgb(0,59,147);
+    background: linear-gradient(90deg, rgba(0,59,147,1) 0%, rgba(0,114,152,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.precioTotal{
+    font-size: 1.7vw;
+  font-family: 'Ropa Sans', sans-serif;
+    font-weight: 900;
+}
+
+.imagenInstrucciones{
+    height: 30vw;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1vw;
+
+}
+
+#cerrarSesion{
+    background-color: #007298;
+    color: white;
+}
+
+#cerrarSesion:hover{
+    background: #044C64;
+}
+
+
+/**{background: #007298}*/
+
+
+
+/*pantallas pequeñas*/
+@media all and (max-width: 1000px) {
+    .TituloProduc{
+        font-size:5.5vw;
+    }
+
+    .imagenArt {
+        /*width:  12.194444444444445vw;*/
+        height: 40vw;
+        /*height:  13vw;*/
+        width: 45vw;
+        /*height: 100%;*/
+        /*height: 25vw*/
+    }
+
+    .tag {
+        font-size: 1.4vw;
+    }
+
+    .descricionP{
+    font-size: 3vw;
+}
+
+    .precio{
+    font-size: 5vw;
+        margin-top: .5vw;
+}
+
+    .ingresoCantidad{
+         width: 10vw;
+        font-size: 5vw;
+    }
+
+    .bi-bag-plus-fill{
+    height: 30px;
+    width: 30px;
+}
+
+    .botonMas{
+        margin-bottom: 10px;
+        margin-left: 8vw;
+        justify-content: flex-end;
+
+    }
+
+    #Comprar{
+  font-size: 5vw;
+        width: 50%;
+}
+
+    .precioTotal{
+    font-size: 4.5vw;
+}
+
+    .imagenInstrucciones{
+    height: 80vw;
+    margin-bottom: 3vw;
+}
+
+
+
+}
+
+
+

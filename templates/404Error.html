@@ -1,0 +1,30 @@
+{% extends 'baseVarias.html' %}
+{% block titulo %}Oops... Error 404 {% endblock %}
+
+{% block seccion %}
+    <div class="container-fluid ">
+
+    <div class="row contenedorDel404">
+        <div class="col-12 col-xl-6 col-xxl-6   contenedorImagen"><img src="/static/Img/404-img.png" class="img-fluid imagen404Error" alt="" /></div>
+        <div class="col-12 col-xl-6 col-xxl-6  ">
+            <div class="6  letras404 d-flex justify-content-center">PÁGINA NO ENCONTRADA</div>
+            <div class="d-flex justify-content-center "><img src="/static/Img/PropsLogoPNG.png" class="img-fluid icono404" alt="" /></div>
+
+            <div class="6  letras4041 d-flex justify-content-center ">La página a la que intentas acceder no se encuentra en el servidor.</div>
+            <div class="6  letras4041 d-flex justify-content-center">Verifica que el URL sea el correcto.</div>
+            <div class="d-flex justify-content-center">
+            <div class="col-10 col-xl-12 col-xxl-12 ">
+                <button  id="IrA" type="button" class="btn btn-block  w-100 fa-lg border-0 rounded-pill" onclick="location.href = '/Bienvenido'">Ir a página de Bienvenida</button>
+            </div>
+                </div>
+        </div>
+    </div>
+{#<div class="col-6 bg-warning">#}
+
+{#       <img src="/static/Img/404-img.png" class="img-fluid imagen404Error" alt="" />#}
+{#</div>#}
+
+    </div>
+
+
+{% endblock %}
