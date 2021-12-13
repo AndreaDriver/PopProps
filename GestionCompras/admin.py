@@ -3,7 +3,7 @@ from GestionCompras.models import *
 
 class PagoAdmin(admin.ModelAdmin):
     list_display = ("IdUser","Pago", "carrito","FechaPago")
-    list_filter = ("IdUser", "carrito", "FechaPago")
+    list_filter = ("IdUser", "FechaPago")
     search_fields = ("carrito","FechaPago")
     list_per_page = 10
 

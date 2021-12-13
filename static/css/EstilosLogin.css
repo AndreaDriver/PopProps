@@ -184,15 +184,17 @@ background: linear-gradient(90deg, rgba(0,59,147,1) 0%, rgba(0,114,152,1) 0%, rg
 .titulosImagenesCarrusel{
    font-family: 'Luckiest Guy', cursive;
   font-weight: bold;
-  font-size: 2.5vw;
+  font-size: 4vw;
 color: transparent;
    -webkit-text-stroke: .05vw #FFFFFF; /* width and color */
 }
 
+/**{background-color: purple}*/
+
 .textoImagenesCarrusel{
    font-family: 'Ropa Sans', sans-serif;
  color: #f4f4f4;
-  font-size: 1vw;
+  font-size: 2vw;
 }
 /*end carrusel*/
 

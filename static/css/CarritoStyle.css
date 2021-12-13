@@ -145,11 +145,17 @@ background: linear-gradient(90deg, rgba(0,59,147,1) 0%, rgba(0,114,152,1) 35%, r
 
 .imagenInstrucciones{
     height: 30vw;
-    margin-left: 0;
-    margin-right: 0;
+    width: 40vw;
+    /*width: 15vw;*/
+    /*margin-left: 0;*/
+    /*margin-right: 0;*/
     margin-bottom: 1vw;
 
 }
+
+/**{*/
+/*    background-color: red;*/
+/*}*/
 
 #cerrarSesion{
     background-color: #007298;
@@ -162,6 +168,12 @@ background: linear-gradient(90deg, rgba(0,59,147,1) 0%, rgba(0,114,152,1) 35%, r
 
 
 /**{background: #007298}*/
+
+#errorSelecciona{
+    /*background-color: #2d2d35;*/
+    background-color: #F3F3F3;
+    /*height: 3.6vw;*/
+}
 
 
 
@@ -221,7 +233,9 @@ background: linear-gradient(90deg, rgba(0,59,147,1) 0%, rgba(0,114,152,1) 35%, r
 
     .imagenInstrucciones{
     height: 80vw;
-    margin-bottom: 3vw;
+        width: 100%;
+    /*    width: 100%;*/
+    margin-bottom: 4vw;
 }
 
 

@@ -7,7 +7,7 @@
     <title>Carrito de compra</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
-      <link href="{% static '/css/CarritoStyle.css' %}" rel="stylesheet" type="text/css">
+      <link href="{% static 'css/CarritoStyle.css' %}" rel="stylesheet" type="text/css">
     <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -39,13 +39,13 @@
             </button>
 
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <a class="navbar-brand col-12  col-lg-4 col-xl-4 col-xxl-4  d-flex justify-content-center justify-content-xxl-start" href="#">
+                <a class="navbar-brand col-12  col-lg-4 col-xl-4 col-xxl-4  d-flex justify-content-center justify-content-xxl-start" >
                     <img src="/static/Img/PopPropsBlanca.png" class="img-fluid ms-2" alt="..." width="100" height="60">
                 </a>
 
                         <div class="col-12 col-lg-8 col-xl-8 col-xxl-8 d-flex justify-content-xxl-end justify-content-xl-end justify-content-lg-end">
                         <button type="button" id="cerrarSesion" class="btn me-3 rounded-pill" onclick="location.href = '/Bienvenido'">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 18">
                               <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
                               <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
                             </svg>
@@ -58,7 +58,16 @@
         </div>
     </nav>
     <!-- ------------END NAV----------- -->
-{#<div class="d-flex"></div>#}
+ {% for message in messages %}
+<div id="errorSelecciona" class="alert alert-dismissible fade show mb-3 mt-0 shadow" role="alert">
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="" fill="#dd605f" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+</svg>
+  <strong>Oh, detallito!</strong> {{ message }}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
  <!-- ------------CONTENT----------- -->
     <div class="container-xl overflow-visible">
 
@@ -67,7 +76,7 @@
         <!-- ------------Art. en carrito----------- -->
          {% if articulos %}
                 <!-- ------------titulos----------- -->
-                <div class="tituloArriba row mt-3 ">
+                <div class="tituloArriba row mt-4 ">
                     <div class="col-3 d-flex justify-content-start border-bottom">Artículo</div>
                     <div class="col-6 d-flex justify-content-start border-bottom">Descripción</div>
                     <div class="col-1 d-flex justify-content-center border-bottom">Precio</div>
@@ -117,8 +126,7 @@
             <!-- ---- agregar a pedido ----- -->
             <div class="col-4 col-xl-1 col-xxl-1 d-flex flex-column">
                  <div class="m-auto">
-{#                       <button id="" name="botonB" value="{{item.id}}" class="btn me-2 rounded-circle" type="submit" >sdsdfsdf#}
-{#                            </button>#}
+
                 <button  type="submit" name="botonB"  value="{{ item.id }}" id="" class="botonMas btn btn-info rounded-circle" >
                     <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-bag-plus-fill" viewBox="0 0 16 20">
                       <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
@@ -131,8 +139,10 @@
  </form>
              {% endfor %}
              {% else %}
-        <div class="row col-12 mt-4">
-            <img src="/static/Img/LOR.jpg" class="imagenInstrucciones" alt="...">
+        <div class="row col-12 mt-4 d-flex justify-content-center">
+        <div class="col-10 d-flex justify-content-center">
+            <img src="/static/Img/listosPago.gif" class="imagenInstrucciones" alt="...">
+        </div>
         </div>
 
         {% endif %}
@@ -142,10 +152,6 @@
 
 
         <div class="d-flex flex-column mt-0 " >
-{#        <div class="row col-12 col-xl-4 col-xxl-4 ms-auto">#}
-{#            <div class="precioTotal list-inline-item " id="PTitulo" style="display: none;">Precio total </div>#}
-{#            <p class="precioTotal list-inline-item" id="PT" style="display: none;" value="240">240</p>#}
-{#        </div>#}
 
               <form method="GET" class="d-flex">
 
@@ -161,54 +167,6 @@
         </div>
 </form>
             </div>
-
-
-
-
-
-{#ESTO YA NO SIRVE (JS)#}
-     <script type="text/javascript">
-     var ppTTacomulado = 0
-
-
-        function showTotal(id, precio) {
-            {#Mostar total#}
-            {#document.getElementById('PTitulo').style.display = 'block';#}
-            document.getElementById('PT').style.display = 'block';
-            document.getElementById('Comprar').style.display = 'block';
-
-            {#inavilitar boton#}
-            var nw =document.getElementById(id)
-            nw.className = "btn rounded-circle btn-danger";
-            nw.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 18"> <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/> </svg>';
-            nw.disabled = true;
-
-
-            {#Calcular total#}
-            {#var cantV =  document.getElementById(cantidad).value#}
-            var cantV =  document.getElementById('cantidad'+id).value
-
-
-
-             {#esto cambia#}
-            {#var precioU = document.getElementById('precio').textContent;#}
-            var precioU = precio
-            {#alert(precioU)#}
-            {#esto cambia END#}
-
-            var PrecioConvertido = Number(precioU)
-
-            var ppTT = cantV*PrecioConvertido
-            ppTTacomulado = ppTTacomulado + ppTT
-            document.getElementById('PT').innerHTML= 'Precio total: $'+ppTTacomulado+' USD'
-        }
-
-
-</script>
-
-
-
-
 
 
 </div>

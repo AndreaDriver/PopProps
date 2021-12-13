@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -32,6 +33,8 @@ urlpatterns = [
     path("Carrito/<string>", CarritoCompra),
     path('Pago/', PagoView),
 ]
+
+# handler404 = error_404
 
 if settings.DEBUG:
     urlpatterns += staticfiles_urlpatterns()

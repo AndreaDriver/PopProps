@@ -8,6 +8,12 @@ from django.http import HttpResponseRedirect
 
 # Create your views here.
 def Bienvenida(request):
+   iddSesionU = request.session.get('id')  # SE OBTIENE EL ID DEL USUARIO
+
+   #Borrar sesion del usuarios
+   if iddSesionU is not None:
+      del request.session['id']
+
    return render(request, 'Pagina_Bienvenida.html')
 
 
@@ -27,11 +33,6 @@ def registro(request):
             o_ref.save()
             id = model.objects.only('id').get(username=username).id
             request.session['id'] = id #SE GUARDA EL ID DEL USUARIO
-            # idU = o_ref.id
-            # idUser = model.objects.get(id=id)  # tiene que ser un objeto de la tabla usuario
-            # valor = {"id": "idU"}  # se obtiene ID del usuario registrado
-            # valor = {"id": idU}
-            # request.session['id'] = valor
             return HttpResponseRedirect('/Continua/')
 
    else:
@@ -70,8 +71,7 @@ def inicio(request):
    if request.method == 'POST':
       username = request.POST.get('username')
       password = request.POST.get('password')
-      # usNameBD = User.objects.only('username').get(username=username)
-      # usConBD = User.objects.only('password').get(username)
+
       usNameBD=""
       try:
          usNameBD = User.objects.get(username=username).username
@@ -81,7 +81,6 @@ def inicio(request):
             id = User.objects.only('id').get(username=username).id
             request.session['id'] = id  # sesion
             return HttpResponseRedirect('/Catalogo/')
-            # return HttpResponse('<h1>Jason Isaacs ♥</h1>')
          else:
             messages.error(request, "Correo electrónico o contraseña incorrectos")
             return render(request, 'inicioSesion.html')

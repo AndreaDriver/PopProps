@@ -21,7 +21,7 @@
 <link rel="shortcut icon" sizes="192x192" href="/static/Img/icoPopU.ico">
 </head>
 <body>
-    <!--<button type="button" class="btn btn-info">Carrito</button><a href="#" class="btn btn-info">Leer más</a>-->
+
 
     <!-- ------------Nav----------- -->
     <nav id="aa" class="navbar navbar-expand-lg ">
@@ -55,7 +55,7 @@
                               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                             </svg>
                             </button>
-{#<input id="listaa" style="visibility: hidden">#}
+
 
                     </form>
 
@@ -82,7 +82,7 @@
 
                     </div>
                     <div>
-                        <button type="button" id="cerrarSesion" class=" btn rounded-pill " onclick="location.href = '/Bienvenido'">
+                        <button type="button" id="cerrarSesion" name="cerroSesion" class=" btn rounded-pill " onclick="location.href = '/Bienvenido'">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                               <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
                               <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
@@ -145,10 +145,7 @@ var listaSeleccionada = [];
             {#Mostrar boton de carrito#}
             document.getElementById('botonCarrito').style.display = 'block';
 
-            {#Modifica el boton#}
-            {#var iid = this.id#}
-            {# alert(id);#}
-            {#document.getElementById(id).style.display = 'none';#}
+
             var nw =document.getElementById(id)
 
             nw.className = "btn rounded-pill btn-danger";
@@ -157,32 +154,15 @@ var listaSeleccionada = [];
 
             {#Crear lista#}
              listaSeleccionada.push(id)
-            {#alert(listaSeleccionada)#}
-            {#alert(listaSeleccionada)#}
-            {#document.getElementById('listaa').value = as#}
-            {#var xx = document.getElementById('listaa')#}
-            {#alert(xx)#}
-
-
 
         }
 
         function IrCarrito(){
-           {#window.location.href = '/Carrito',{"articulos": listaSeleccionada}#}
             window.location = '/Carrito/'+ listaSeleccionada
 
 
         }
 
-        function nuevoButton(elementId, url){
-            {#var buttonEl = document.createElement("BotonNuevo");#}
-            {#var buttonTextEl = document.createElement("button");#}
-            {#buttonTextEl.className = "btn rounded-pill btn-dark";#}
-            {#buttonTextEl.innerText = "Articulo seleccionado";#}
-            {#buttonTextEl.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 20"> <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/> </svg> Artículo seleccionado'#}
-            {#buttonEl.appendChild(buttonTextEl);#}
-            {#document.getElementById(elementId).appendChild(buttonEl);#}
-        }
 
 
 

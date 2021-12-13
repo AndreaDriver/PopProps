@@ -25,9 +25,11 @@ background: linear-gradient(90deg, rgba(0,59,147,1) 0%, rgba(0,114,152,1) 35%, r
     box-shadow: -2px 7px 17px 4px rgba(0,0,0,0.44);
   /*margin-top: 10px;*/
     z-index: 2;
-  margin-top: -10%;
+  margin-top: -15%;
     /*position: absolute;*/
 }
+
+/**{background-color: red}*/
 
 @keyframes logo {
   0% {
@@ -399,11 +401,6 @@ background: linear-gradient(90deg, rgba(0,59,147,1) 0%, rgba(0,114,152,1) 35%, r
   }
 }
 
-*{
-  /*background-color: #003b93;*/
-  /*background-color: #007298 ;*/
-
-}
 
 /*pagina no encontrada*/
 .letras404{
